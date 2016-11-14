@@ -7,5 +7,5 @@ var registerRoutes = [
         component: register_component_1.RegisterComponent
     }
 ];
-exports.homeRouting = router_1.RouterModule.forChild(registerRoutes);
+exports.registerRouting = router_1.RouterModule.forChild(registerRoutes);
 //# sourceMappingURL=register.routes.js.map
