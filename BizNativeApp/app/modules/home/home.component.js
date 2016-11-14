@@ -1,8 +1,9 @@
 "use strict";
 var core_1 = require("@angular/core");
-var frameModule = require("ui/frame");
+var router_1 = require("@angular/router");
 var HomeComponent = (function () {
-    function HomeComponent() {
+    function HomeComponent(router) {
+        this.router = router;
     }
     HomeComponent.prototype.login = function () {
         alert("Login Call");
@@ -19,8 +20,7 @@ var HomeComponent = (function () {
         });
     };
     HomeComponent.prototype.registerPage = function () {
-        var topmost = frameModule.topmost();
-        topmost.navigate("register");
+        this.router.navigate(["register"]);
     };
     HomeComponent.prototype.testcall = function () {
         alert("sfsfsf");
@@ -32,7 +32,7 @@ var HomeComponent = (function () {
             templateUrl: "home.component.html",
             styleUrls: ["home.component.css"]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [router_1.Router])
     ], HomeComponent);
     return HomeComponent;
 }());

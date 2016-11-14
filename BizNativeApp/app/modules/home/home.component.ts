@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import frameModule = require("ui/frame");
+import {Router} from "@angular/router";
 
 
 @Component({
@@ -10,6 +10,10 @@ import frameModule = require("ui/frame");
 })
 
 export class HomeComponent {
+    public constructor(private router: Router) {
+ 
+    }
+
     login() {
         alert("Login Call");
     }
@@ -27,8 +31,7 @@ export class HomeComponent {
     }
     registerPage()
     {
-        var topmost = frameModule.topmost();
-        topmost.navigate("register");
+         this.router.navigate(["register"]);
     }
     testcall()
     {
