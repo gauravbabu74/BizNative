@@ -1,7 +1,14 @@
-<ActionBar title="Home">
+<ActionBar title="Login">
   <!-- actionbar items  -->
 </ActionBar>
-
-<GridLayout>
+<StackLayout>
   <!-- page content -->
-</GridLayout>
+    <Image src="~/images/logo.png" stretch="none" horizontalAlignment="center"></Image>
+    <TextField hint="Email Address" keyboardType="email" autocorrect="false" autocapitalizationType="none"></TextField>
+    <TextField hint="Password" secure="true"></TextField>
+    <Button text="LOGIN" (tap)="login()" backgroundColor="#a6ce39" color="#ffffff"></Button>
+   <GridLayout row="0" columns="*, auto">
+     <Label class="forgot-password-label" text="Forgot password?" (tap)="forgotPass()"  col="0"></Label>
+     <Label class="forgot-password-label" text="Create New ID" (tap)="registerPage()"  col="1"></Label>
+    </GridLayout>
+ </StackLayout>
