@@ -1,3 +1,5 @@
+import { SIDEDRAWER_DIRECTIVES } from "nativescript-telerik-ui/sidedrawer/angular";
+
 import { NgModule } from "@angular/core";
 
 import { NativeScriptModule } from "nativescript-angular/platform";
@@ -17,7 +19,7 @@ import { RegisterModule } from "./modules/register/register.module";
     HomeModule,
     RegisterModule
   ],
-  declarations: [AppComponent],
+  declarations: [AppComponent,SIDEDRAWER_DIRECTIVES],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

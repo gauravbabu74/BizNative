@@ -1,9 +1,19 @@
-<ActionBar title="Register">
-  <!-- actionbar items  -->
-</ActionBar>
-<StackLayout>
-  <!-- page content -->
-    <TextField hint="Email Address" keyboardType="email" autocorrect="false" autocapitalizationType="none"></TextField>
-    <TextField hint="Password" secure="true"></TextField>
-    <Button text="Register" (tap)="login()" backgroundColor="#a6ce39" color="#ffffff"></Button>
- </StackLayout>
+<StackLayout class="sidedrawer-left">
+  <StackLayout class="sidedrawer-header">
+    <!-- The contents of the header -->
+  </StackLayout>
+  <StackLayout class="sidedrawer-content">
+
+    <!-- A list item with no icon -->
+    <GridLayout class="sidedrawer-list-item" rows="*" columns="*">
+      <Label row="0" col="0" text="A Link"></Label>
+    </GridLayout>
+
+    <!-- A list item with an icon -->
+    <GridLayout class="sidedrawer-list-item" rows="auto" columns="auto, *">
+      <Image class="sidedrawer-list-item-icon" row="0" col="0" src="~/images/logo.png"></Image>
+      <Label class="sidedrawer-list-item-text" row="0" col="1" text="A Link"></Label>
+    </GridLayout>
+
+  </StackLayout>
+</StackLayout>

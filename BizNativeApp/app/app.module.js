@@ -1,4 +1,5 @@
 "use strict";
+var angular_1 = require("nativescript-telerik-ui/sidedrawer/angular");
 var core_1 = require("@angular/core");
 var platform_1 = require("nativescript-angular/platform");
 var router_1 = require("nativescript-angular/router");
@@ -18,7 +19,7 @@ var AppModule = (function () {
                 home_module_1.HomeModule,
                 register_module_1.RegisterModule
             ],
-            declarations: [app_component_1.AppComponent],
+            declarations: [app_component_1.AppComponent, angular_1.SIDEDRAWER_DIRECTIVES],
             bootstrap: [app_component_1.AppComponent]
         }), 
         __metadata('design:paramtypes', [])
