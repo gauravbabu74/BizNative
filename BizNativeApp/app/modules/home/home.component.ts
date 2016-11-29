@@ -13,7 +13,6 @@ export class HomeComponent {
     public constructor(private router: Router) {
  
     }
-
     login() {
         alert("Login Call");
     }

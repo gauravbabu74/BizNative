@@ -7,6 +7,7 @@ import { Component } from "@angular/core";
   styleUrls: ["register.component.css"]
 })
 
+
 export class RegisterComponent {
     registerSubmit() {
         alert("registerSubmit Call");
