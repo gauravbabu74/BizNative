@@ -1,19 +1,21 @@
-<StackLayout class="sidedrawer-left">
-  <StackLayout class="sidedrawer-header">
-    <!-- The contents of the header -->
-  </StackLayout>
-  <StackLayout class="sidedrawer-content">
-
-    <!-- A list item with no icon -->
-    <GridLayout class="sidedrawer-list-item" rows="*" columns="*">
-      <Label row="0" col="0" text="A Link"></Label>
-    </GridLayout>
-
-    <!-- A list item with an icon -->
-    <GridLayout class="sidedrawer-list-item" rows="auto" columns="auto, *">
-      <Image class="sidedrawer-list-item-icon" row="0" col="0" src="~/images/logo.png"></Image>
-      <Label class="sidedrawer-list-item-text" row="0" col="1" text="A Link"></Label>
-    </GridLayout>
-
-  </StackLayout>
-</StackLayout>
+<RadSideDrawer tkExampleTitle tkToggleNavButton>
+    <StackLayout tkDrawerContent class="sideStackLayout">
+        <StackLayout class="sideTitleStackLayout">
+            <Label text="Navigation Menu"></Label>
+        </StackLayout>
+        <StackLayout class="sideStackLayout">
+            <Label text="Primary" class="sideLabel sideLightGrayLabel"></Label>
+            <Label text="Social" class="sideLabel"></Label>
+            <Label text="Promotions" class="sideLabel"></Label>
+            <Label text="Labels" class="sideLabel sideLightGrayLabel"></Label>
+            <Label text="Important" class="sideLabel"></Label>
+            <Label text="Starred" class="sideLabel"></Label>
+            <Label text="Sent Mail" class="sideLabel"></Label>
+            <Label text="Drafts" class="sideLabel"></Label>
+        </StackLayout>
+    </StackLayout>
+    <StackLayout tkMainContent>
+        <Label [text]="mainContentText" textWrap="true" class="drawerContentText"></Label>
+        <Button text="OPEN DRAWER" (tap)=openDrawer()></Button>
+    </StackLayout>
+</RadSideDrawer>
